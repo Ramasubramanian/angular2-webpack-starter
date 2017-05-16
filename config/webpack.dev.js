@@ -136,11 +136,8 @@ module.exports = function (options) {
     plugins: [
 
       new ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery",
           "window.jQuery": "jquery",
           Hammer: "hammerjs/hammer",
-          Materialize: "materialize-css"
       }),
 
       /**

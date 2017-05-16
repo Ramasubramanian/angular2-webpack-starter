@@ -15,6 +15,7 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
+import 'materialize-css';
 import { MaterializeModule } from 'angular2-materialize';
 
 /*
