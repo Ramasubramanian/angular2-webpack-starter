@@ -1,11 +1,14 @@
 import {
   Component,
-  OnInit
+  OnInit, 
+  EventEmitter
 } from '@angular/core';
 
 import { AppState } from '../app.service';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
+
+import {MaterializeDirective, MaterializeAction} from "angular2-materialize";
 
 @Component({
   // The selector is what angular internally uses
@@ -24,6 +27,9 @@ import { XLargeDirective } from './x-large';
 export class HomeComponent implements OnInit {
   // Set our default values
   public localState = { value: '' };
+
+  private modalActions = new EventEmitter<string|MaterializeAction>();
+
   // TypeScript public modifiers
   constructor(
     public appState: AppState,
